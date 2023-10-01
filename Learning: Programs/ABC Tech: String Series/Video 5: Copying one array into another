@@ -1,0 +1,24 @@
+package abcTechStringVideos;
+// Video 5
+//Copying one array into another
+// y[] = An array who's elements have the "char" data type 
+// a[] = An array who's elements have the "char" data type. It is an empty array
+// size = The number of elements in the 'y' array
+// ++i = Allows each index in the 'a' array to be assigned an element from array 'y'
+public class CopyingOneArrayIntoAnother {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String x = "ABC tech";
+		char y[] = x.toCharArray(); //1. Method that converts string into a sequence of characters that is inserted into an array
+		int size = y.length; 		//2. Method returns the length of a string 
+		char a[] = new char[size];  //3. A new array is constructed with the same number of elements as the 'y' array
+		int i = 0;
+		while(i != size) 			// 4. The loop will repeatedly execute so long as the value of 'i' does not equal the value of "size"
+		{
+			a[i] = y[i]; 			// 5. The array 'a' is assigned the values in array 'y'
+			++i;
+		}
+		System.out.println(a);
+		System.out.println(y);
+	}
