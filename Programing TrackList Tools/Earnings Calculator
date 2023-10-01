@@ -1,1 +1,52 @@
+package ProgramTrackListUpdater;
+import java.util.Scanner;
+public class Earnings {
+	public static void main(String [] args) 
+	{	
+		
+		// Step 1: Menu output:
+		System.out.println("To quit, input 'quit'");
+		// Step 2: Declare and initialize variables
+		int hours;
+		double income;
+		double currentEarnings;
+		double newEarnings = 0;
+		final double wage = 28.85;
+		String Status = "continue";
+		
+		
+		// Step 3: Create instance of scanner class to allow computer to receive data from the keyboard
+		Scanner input = new Scanner(System.in);
+		
+		
+		// Step 4: Prompt user to input information
+		
+		
+		while(Status != "quit")
+		{
+						// User is prompted to input their current earnings and the hours worked
+			
+		System.out.println("Enter your current earnings");
+		currentEarnings = input.nextDouble();
+		
+		System.out.println("Enter number of hours worked");
+		hours = input.nextInt();
+		
+						// Calculations 
+		
+		income = hours * wage;
+		newEarnings = currentEarnings + income;
+		
+						// New earnings is output to the user
+		
+		System.out.println("Your new Earnings: " + newEarnings);
+		
+						// User is prompted to either continue or quit
+		
+		System.out.println("Would you like to continue? Respond with 'quit' if so");
+		Status = input.next();
+		}
 
+		
+	}
+}	
