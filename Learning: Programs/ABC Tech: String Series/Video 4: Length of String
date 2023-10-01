@@ -1,0 +1,21 @@
+package string2;
+// New method: string.concat(value)  = A method that joins one string to the end of another
+// New method: toCharArray() 		 = Converts a string into an sequence of characters that is inserted in a sequence 
+public class LengthOfString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String x = "ABC tech";
+		x = x.concat("\0");	// 1. The string will add the value to the end
+		char y[] = x.toCharArray(); // 2. A new array has been made 
+		int count = 0;
+		int i = 0;
+		while(y[i] != '\0')	//3. The loop will repeat so long as the element at index "i" does not equal '\0'
+		{
+			++count;
+			++i;
+		}
+		System.out.printf("%d", count);
+	}
+
+}
