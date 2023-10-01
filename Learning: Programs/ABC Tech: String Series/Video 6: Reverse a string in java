@@ -1,0 +1,25 @@
+// Video 6
+// Reverse a string in java
+//"size" = The length of array 'y' and 'a'
+//'i' = The index of each array
+//++i = This allows the index for both arrays to update upon each iteration
+public class ReversingAString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String x = "ABC tech";
+		char y[] = x.toCharArray(); // 1. A method that converts a string into a sequence of characters that is inserted into a matrix
+		int i = 0;
+		int size = y.length; // 2. A method that returns the length of a string 
+		char a[] = new char[size]; // 3. A new array has been constructed and has the same size number of elements as 'y' array
+		while(i != size) // loop will execute so long as the value at index 'i' does not equal the value of "size"
+		{
+			a[size - 1 - i] = y[i]; // 4. array 'a' will receive elements from array 'y' with array 'a' having a start index at the end of the array
+			++i;
+		}
+		System.out.println(a);
+		System.out.println(y);
+		
+	}
+
+}
