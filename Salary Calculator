@@ -1,0 +1,80 @@
+package project;
+import java.util.Scanner;
+
+public class SalaryCalculator{
+
+	public static void main(String[] args) {
+		// Step 1: Declare all variables 
+		String firstName;
+		String lastName;
+		String occupation;
+		// Salary Calulations
+		double salaryPerYear;
+		double salaryPerMonth;
+		double salaryPerDay;
+		double salaryPerWeek;
+		double salaryPerHour;
+		double salaryPerMinute;
+		double salaryPerSecond;
+		
+		// Time Calculations
+		double hoursPerYear;
+		double minutesPerYear;
+		double secondsPerYear;
+		
+		// Time Constants 
+		final int DAYS_PER_YEAR = 365;
+		final int WEEKS_PER_YEAR = 52;
+		final int MONTHS_PER_YEAR = 12;
+		final int HOURS_PER_DAY = 24;
+		final int MINUTES_PER_HOUR = 60;
+		final int SECONDS_PER_MINUTE = 3600;
+		
+		
+		
+		// Step 2: Create an instance of the Scanner class
+		Scanner input = new Scanner(System.in);
+		
+		//Step 3: Prompt the user to input their salary per year and their name
+		System.out.println("What is your first name");
+		firstName = input.next();
+		System.out.println("What is your last name");
+		lastName = input.next();
+		System.out.println("What is your occpation?");
+		occupation = input.next();
+		System.out.println("Enter your yearly salary");
+		salaryPerYear = input.nextDouble();
+		
+		//Step 4: Calculations
+			
+			// Time Calculations 
+		hoursPerYear = HOURS_PER_DAY * DAYS_PER_YEAR;
+		minutesPerYear = MINUTES_PER_HOUR * HOURS_PER_DAY * DAYS_PER_YEAR;
+		secondsPerYear = SECONDS_PER_MINUTE * minutesPerYear;
+		
+			// Salary Calculations
+		salaryPerMonth = salaryPerYear / MONTHS_PER_YEAR;
+		salaryPerWeek = salaryPerYear / WEEKS_PER_YEAR;
+		salaryPerDay = salaryPerYear / DAYS_PER_YEAR;
+		salaryPerHour = salaryPerYear / hoursPerYear;
+		salaryPerMinute = salaryPerYear / minutesPerYear;
+		salaryPerSecond = salaryPerYear / secondsPerYear;
+		
+		
+		
+		// Step 5: Output
+		System.out.print("Hello " + firstName);
+		System.out.println(" " + lastName);
+		System.out.println("As a " + occupation);
+		System.out.println("Your salary per year is: $" + salaryPerYear);
+		System.out.println("Your salary per month is: $" + salaryPerMonth);
+		System.out.println("Your salary per week is: $" + salaryPerWeek);
+		System.out.println("Your salary per day is: $" + salaryPerDay);
+		System.out.println("Your salary per hour is: $" + salaryPerHour);
+		System.out.println("Your salary per minute is: $" + salaryPerMinute);
+		System.out.println("Your salary per second is: $" + salaryPerSecond);
+
+
+	}
+
+}
