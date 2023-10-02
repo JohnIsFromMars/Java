@@ -1,35 +1,41 @@
-package abcTechStringVideos;
-// Video 7
-// New method: System.exit(0) = Method exits current program by terminating running java virtual machine
-public class Palindrome {
+package palindrome;
+// Video 8
+// New method: System.exit(0) = Represents a successful termination
+public class Palindrome1 {
 
 	public static void main(String[] args) {
-		String x = "        ";
+		String x = "India";
 		
-		char y[] = x.toCharArray();				 // 1. A method that converts string into a sequence of characters that is inserted into an array
-		int size = y.length;					 // 2. A method that returns the number of elements in the array
-		char a[] = new char[size];  			 // 3. A new array named 'a' is created with the same number of arrays as the 'y' array
+		char y[] = x.toCharArray(); // 1. A method that converts a string into a sequence of characters that is inserted into an array
+		int size = y.length; 		// 2. A method that returns the number of arrays
+		char a[] = new char[size]; 	// 3. A new array named 'a' is constructed with the same number of elements as array 'y'
 		int i = 0;
-		while(i != size)						 // 4. Loop will repeatedly execute so long as the value of 'i' does not equal the value of 'size'
+		while(i != size)			// 4. Loop will repeatedly execute so long as the value at variable 'i' does not equal the value of "size"
 		{
-			a[size - 1 - i] = y[i];				 // 5. The array 'a' is assigned values from the array 'y'
+			a[size -1 -i] = y[i];   // 5. A palindrome is created 
 			++i;
 		}
-		i = 0;
-		while(i != size)						 // 6. Loop will repeatedly execute so long as the value of 'i' does not equal the value of 'size'
+		i = 0;						// 6. i must be reset back to 0
+		System.out.println(a);
+		System.out.println(y);
+		while(i != size)
 		{
-			if(a[i] != y[i])
-			{
-				System.out.println("Not a palindrome");		// 7. Since array 'a' and array 'y' are reversed, if are not equal, it is not a palindrome
-				System.exit(0);								// 8. System.exit(0) indicates successful termination
+			if (a[i]!= y[i])		// 7. If the value of the element at index 0 does not equal the value of y[i] at index 0....
+				{		
+					System.out.println("Not a palindrome");	 //8. A palindrome is a word that is the same even when reversed. 
+																 // if, the value at index 0 is not the same, its not a palindrome. 
+					System.exit(0);							 // 9. Executes successful termination of the program
+				}
+			else												 // 10. Else means the 1st values are the same, meaning it is a palindrome
+				{
+					i++;										 // 11. The next index is selected
+					continue;									 // 12. While loop repeats again
+				}
 			}
-			else
-			{
-				++i;
-				continue;
-			}
+		System.out.println("Palindrome");
 		}
-		System.out.println("Palindrome"); 
+		
+		
 	}
 
-}
+
