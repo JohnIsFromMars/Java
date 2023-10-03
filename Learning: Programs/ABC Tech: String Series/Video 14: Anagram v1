@@ -1,0 +1,29 @@
+package abcTechStringVideos;
+// New method: Arrays.sort(array1) = Method that sorts an array alphabetically 
+// New method: Arrays.equals(a, b) = Method that checks whether all corresponding pairs of elements in the two arrays are equal
+import java.util.Arrays;
+public class Anagram {
+
+	public static void main(String[] args) {
+		String x = "SILENT";
+		String y = "HITLER";
+		
+		char a[] = x.toCharArray();								// 1. A method that converts a string into a sequence of characters that are inserted into an array
+		char b[] = y.toCharArray();
+		
+		Arrays.sort(a);											// 2. A method that rearranges an array alphabetically 
+		Arrays.sort(b);
+		
+		Boolean result = Arrays.equals(a, b);					// 3. A method that checks whether two arrays have the same corresponding elements
+		
+		if(result == true)										// 4. A boolean can be compared with a boolean 
+		{
+			System.out.println("Strings of Anagram");
+		}
+		else
+		{
+			System.out.println("Strings are not Anagram");
+		}
+	}
+
+}
