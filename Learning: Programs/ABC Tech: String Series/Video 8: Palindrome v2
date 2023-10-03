@@ -1,0 +1,41 @@
+package Palindronev2;
+//New month: string.replace('char1', 'char) = A method that replaces a single character with another character and returns the new string
+//New month: string.toUpperCase(); = A method that capitalized every character in a string and returns the string 
+public class Palindrone2 {
+
+	public static void main(String[] args) {
+		String x = "too Hot to HOOT";
+		x = x.replace(" ", "");				// 1. A method that replaces a string character in a string and replaces it with another before returning the string
+		x = x.toUpperCase();				// Method that converts characters into uppercase character and returns the string 
+		char y[] = x.toCharArray(); 		// 2. A method that converts a string into a sequence of arrays and inserts it into an array
+		int size = y.length;				// 3. A method that returns the number of elements in the array
+		char a[] = new char[size]; 			// 4. An array created with the same size as the 'y' array
+		int i = 0;	
+		while(i != size)					// 5. Loop will repeatedly execute so long as the value of 'i' does not equal the value of "size"
+		
+		{
+			a[size -1 -i] = y[i];			// 6. Palindrone created 
+			++i;
+		}
+		i = 0;
+		System.out.println(a);
+		System.out.println(y);
+		while(i != size)					// 7. Loop will repeatedly execute so long as the value of 'i' does not equal the value of "size" 
+		{
+			if(a[i] != y[i])
+			{
+				System.out.println("Not a palindrone");
+				System.exit(0);				// 8. Program will terminate successful 
+			}
+			else
+			{
+				++i;
+				continue;
+			}
+				
+		}
+		System.out.println("Palindrone");
+		
+	}
+
+}
