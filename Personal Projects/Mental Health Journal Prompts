@@ -1,0 +1,166 @@
+package SelfCare;
+import java.util.Scanner;
+
+public class Checklist {
+	
+	public static void main(String[] args) {
+				
+		// Step 1: Initialize all the variables
+		String answer;
+		String firstName;
+		String lastName;
+		String explanation;
+		String a = "I did not prioritize it";
+		String b = "I was too stressed to meditate";
+		String c = "I was focused on something else";
+		String d = "I will meditiate later";
+		String journalTopic1;
+		String journalTopic2;
+		String journalTopic3;
+		String action1;
+		String continue1;
+		String subject;
+		
+		
+		
+		// Step 2: Create a new instance of the Scanner class so the computer can receive inputs from the computer
+		Scanner input = new Scanner(System.in);
+		
+		// Step 1.5:
+				System.out.println("Enter your 1st name");
+				firstName = input.next();
+				
+				System.out.println("Enter your last name");
+				lastName = input.next();
+				
+			// Step 3: Prompt the user to answer the first question: Meditation
+		System.out.println("Did you meditate today? Answer 'yes' or 'no' ");
+			
+		answer = input.next();
+		
+		
+		System.out.print(answer);	
+		
+			// Step 3.5: 
+		if(answer.equals("yes"))
+		{
+			System.out.println("Excellent, here are the benifits of meditation: ");
+			System.out.println("");
+			System.out.println("1. Stress release");
+			System.out.println(" ");
+			System.out.println("Normally, mental and physical stress cause increased levels of the stress hormone 'cortisol' ");
+			System.out.println(" This produces many harmful effects of stress, such as the release of inflammatory cheimcals called cytokines");
+			System.out.println("These effects can disreupt sleep, promote depression and anxiety, increased blood pressure, and contribute to fatigue and cloudly thinking");
+			System.out.println("Meditation reduces the inflamatory response");
+		}
+		else	
+		{
+			System.out.println(" ... Really? So why do you think you were not able to meditate today?");
+			System.out.println("A: I did not prioritize it");
+			System.out.println("B: I was too stressed to meditate");
+			System.out.println("C: I was focused on something else");
+			System.out.println("D: I plan to meditate later today");
+
+			explanation = input.next();
+			
+			System.out.println("When asked why you did not meditiate, you answer: " + explanation);
+			if(explanation.equals(a))
+			{
+				System.out.println("Your issue is: " + a);
+			}
+			System.out.println("What are you going to do differently tommorow to ensure you will meditate?");
+			System.out.println("If you picked option D, when do you think you will meditate?");
+			System.out.println("");
+			System.out.println("Get your journal out and write the answer");
+			System.out.println("");
+			System.out.println("Enter 'done' when you are ready to continue");
+			continue1 = input.next();
+			
+		}
+		
+			// Step 3.8 Actions needed to be done
+		System.out.println("What actions do you need to take today?");
+		System.out.println("");
+		System.out.println("Enter an action");
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		System.out.println("");
+		action1 = input.next();
+		
+		System.out.println("You answered: " + action1);
+	
+		System.out.println("How do you plan to execute this? Write it in your journal or think about it");
+		System.out.println("Enter 'done' when you are finsihed");
+		continue1 = input.next();
+
+		
+			// Step 4: Journal topic
+		System.out.println("Now, lets talk about journaling.");
+		System.out.println("");
+		System.out.println("Please enter your 1st journal topic");
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		journalTopic1 = input.next();
+		System.out.println("Please enter your 2nd journal topic");
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		journalTopic2 = input.next();
+		System.out.println("Please enter your 3rd journal topic");
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+
+		journalTopic3 = input.next();
+		
+		System.out.println("Your 1st journal topic is: ");
+		System.out.println(journalTopic1);
+		System.out.println("Spend atleast 3 minutes to write about this, enter 'done' when you are finished");
+		continue1 = input.next();
+		System.out.println("Your 2nd journal topic is: ");
+		System.out.println(journalTopic2);
+		System.out.println("Spend atleast 3 minutes to write about this, enter 'done' when you are finished");
+		continue1 = input.next();
+		System.out.println("Your 3rd journal topic is: ");
+		System.out.println(journalTopic3);
+		System.out.println("Spend atleast 3 minutes to write about this, enter 'done' when you are finished");
+		continue1 = input.next();
+		System.out.println("How do you feel after writting about these journal topics?");
+		continue1 = input.next();
+		
+			// Step 5: Studies
+		System.out.println("What subject did you study today");
+		System.out.println("*Use _ instead of space*");
+		subject = input.next();
+		
+		System.out.println("Enter 1 topic that you studied from " + subject);
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		journalTopic1 = input.next();
+		System.out.println("Enter another topic that you studied from " + subject);
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		System.out.println("");
+		System.out.println("Answer 'N/A' if not applicable");
+		journalTopic2 = input.next();
+		System.out.println("Enter one final topic that you studied from " + subject);
+		System.out.println("");
+		System.out.println("*Use _ instead of space*");
+		System.out.println("");
+		System.out.println("Answer 'N/A' if not applicable");
+		journalTopic3 = input.next();
+		
+		System.out.println("Spend some time writting about the topics below: ");
+		System.out.println("");
+		System.out.println(journalTopic1);
+		System.out.println(journalTopic2);
+		System.out.println(journalTopic3);
+		System.out.println("");
+		System.out.println("Your brain is like a CPU and learning fills up your ram");
+		System.out.println("If your ram is full, you cannot take new information");
+		System.out.println("Journaling about what you studied allows you to process that info and free up ram");
+		System.out.println("Take some time to journal, enter done when complete");
+		continue1 = input.next();
+		
+		System.out.println("Thank you " + firstName + " " + lastName + " for taking care of your mental health");
+		System.out.println("See you tommorow!");
+		System.out.println(" =) ");
+
